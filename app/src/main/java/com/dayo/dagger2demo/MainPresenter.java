@@ -2,7 +2,6 @@ package com.dayo.dagger2demo;
 
 import android.util.Log;
 
-import com.dayo.dagger2demo.bean.BaseBean;
 import com.dayo.dagger2demo.bean.TestBean;
 import com.dayo.dagger2demo.bean.WeatherBean;
 
@@ -20,7 +19,7 @@ public class MainPresenter {
     private ApiService apiService;
 
     @Inject
-    public MainPresenter(@Named("z")TestBean bean, BaseBean bean1, ApiService apiService){
+    public MainPresenter(@Named("z")TestBean bean, ApiService apiService){
         this.apiService = apiService;
         Log.e("Presenter..",bean.toString()+"="+apiService);
     }
