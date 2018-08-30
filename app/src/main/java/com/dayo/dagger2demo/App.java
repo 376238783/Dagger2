@@ -29,7 +29,7 @@ public class App extends Application{
 
     public ActivityComponent getComponent(){
         return DaggerActivityComponent.builder()
-                .appComponent(build)//TestComponent依赖于全局的AppComponent
+                .appComponent(build)//ActivityComponent依赖于全局的AppComponent
                 .activityModule(new ActivityModule(app.getApplicationContext()))
                 .build();
     }
